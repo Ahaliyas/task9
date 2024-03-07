@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Disappearing Effect</title>
+    <style>
+        img {
+            transition: opacity 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hover over the image to see it disappear!</h1>
+    <img id="disappearingImage" src="https://c4.wallpaperflare.com/wallpaper/567/12/970/linux-kali-linux-nethunter-photoshop-dragon-wallpaper-preview.jpg">
+    
+    <script>
+        const image = document.getElementById('disappearingImage');
+        
+        image.addEventListener('mouseover', () => {
+            image.style.opacity = 0;
+        });
+        
+        image.addEventListener('mouseout', () => {
+            image.style.opacity = 1;
+        });
+    </script>
+</body>
+</html>
